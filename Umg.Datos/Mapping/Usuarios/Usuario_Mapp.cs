@@ -8,6 +8,10 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<usuario_> builder)
         {
+
+
+
+
             builder.ToTable("usuario_")
                   .HasKey(us => us.idUsuario_);
 
@@ -18,6 +22,10 @@ namespace Umg.Datos
                 .HasMaxLength(70);
 
             builder.Property(us => us.condicion);
+
+
+
+
 
 
 

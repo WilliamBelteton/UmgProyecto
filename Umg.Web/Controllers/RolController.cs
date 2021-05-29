@@ -20,17 +20,17 @@ namespace Umg.Web.Controllers
             _context = context;
         }
 
-        //GET api/Categorias
+        //GET api/Rol
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<rol>>> GetRols()
+        public async Task<ActionResult<IEnumerable<rol>>> Getrol()
         {
             return await _context.Rols.ToListAsync();
         }
 
-        // GET api/Categorias/2
+        // GET api/Rol
         [HttpGet("{idRol}")]
 
-        public async Task<ActionResult<rol>> GetRol(int id)
+        public async Task<ActionResult<rol>> Getrol(int id)
         {
             var rol = await _context.Rols.FindAsync(id);
 
@@ -43,7 +43,7 @@ namespace Umg.Web.Controllers
         }
 
 
-        // put api/Categoria/2 
+        // put api/Rol
         [HttpPut("idRol")]
         public async Task<IActionResult> putrol(int id, rol rol
             )
@@ -53,7 +53,7 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
+           
             _context.Entry(rol).State = EntityState.Modified;
 
             try
@@ -78,9 +78,9 @@ namespace Umg.Web.Controllers
 
         }
 
-        //POst api/Categorias
+        //POst api/Rol
         [HttpPost]
-        public async Task<ActionResult<rol>> PostCategoria(rol rol)
+        public async Task<ActionResult<rol>> Postrol(rol rol)
         {
             _context.Rols.Add(rol);
             await _context.SaveChangesAsync();
@@ -88,7 +88,7 @@ namespace Umg.Web.Controllers
             return CreatedAtAction("getrol", new { id = rol.idRol }, rol);
         }
 
-        //Delete Api/Categoria 2 
+        //Delete Api/Rol
 
         [HttpDelete("idRol")]
         public async Task<ActionResult<rol>> Deleterol(int id)

@@ -8,6 +8,9 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<persona> builder)
         {
+
+
+
             builder.ToTable("persona")
                   .HasKey(p => p.idPersona);
             builder.Property(p => p.idTelefono);
@@ -16,6 +19,10 @@ namespace Umg.Datos
             builder.Property(p => p.numeroDeDocumento);
             builder.Property(p => p.emailPersona)
                 .HasMaxLength(50);
+
+
+
+
 
 
         }

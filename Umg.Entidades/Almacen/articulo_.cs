@@ -9,8 +9,16 @@ namespace Umg.Entidades.Almacen
         public int idCodigoArticulo { get; set; }
         [required]
 
+
+
+
+
         public float precioArticulo { get; set; }
-        [requiered]
+        [required]
+
+
+
+
 
         public int stock { get; set; }
 

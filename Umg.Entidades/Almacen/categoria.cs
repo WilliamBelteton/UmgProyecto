@@ -7,6 +7,8 @@ namespace Umg.Entidades.Almacen
 {
    public class categoria
     {
+
+
         public int idCategoria { get; set; }
         [Required]
 
@@ -15,6 +17,10 @@ namespace Umg.Entidades.Almacen
         public string nombreCategoria { get; set; }
         [Required]
         [StringLength(256)]
+
+
+
+
 
 
         public string descripcion { get; set; }

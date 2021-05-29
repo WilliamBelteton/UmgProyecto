@@ -8,6 +8,14 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<telefono_> builder)
         {
+
+
+
+
+
+
+
+
             builder.ToTable("telefono_")
                   .HasKey(t => t.idTelefono);
             builder.Property(t => t.idPersona);
@@ -18,6 +26,9 @@ namespace Umg.Datos
                  .HasMaxLength(8);
             builder.Property(t => t.telefonoLaboral)
               .HasMaxLength(8);
+
+
+
 
         }
     }

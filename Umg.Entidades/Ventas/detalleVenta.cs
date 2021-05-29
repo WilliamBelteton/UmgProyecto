@@ -9,9 +9,17 @@ namespace Umg.Entidades.Ventas
     {
         public int idDetalleVenta { get; set; }
 
-        public int idArticulo { get; set; } //forenea
 
-        public int idVenta { get; set; } // forenea
+
+
+
+        public int idArticulo { get; set; } 
+
+        public int idVenta { get; set; } 
+
+
+
+
 
         public String cantidadVentas { get; set; }
         [required]

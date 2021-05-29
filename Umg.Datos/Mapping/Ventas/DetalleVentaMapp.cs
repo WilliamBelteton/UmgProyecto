@@ -8,6 +8,9 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<detalleVenta> builder)
         {
+
+
+
             builder.ToTable("detalleVenta")
                   .HasKey(de => de.idDetalleVenta);
             builder.Property(de => de.idArticulo);
@@ -16,6 +19,10 @@ namespace Umg.Datos
 
             builder.Property(de => de.cantidadVentas)
               .HasMaxLength(10);
+
+
+
+
         }
     }
 }

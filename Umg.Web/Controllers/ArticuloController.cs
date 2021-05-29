@@ -20,14 +20,14 @@ namespace Umg.Web.Controllers
             _context = context;
         }
 
-        // GET: ArticuloMapp
+        // GET: Articulo
         [HttpGet]
         public async Task<ActionResult<IEnumerable<articulo>>> GetArticulos()
         {
             return await _context.Articulos.ToListAsync();
         }
 
-        // GET: ArticuloMapp/Details/5
+        // GET: Articulo
         [HttpGet("{idArticulo}")]
 
         public async Task<ActionResult<articulo>> Getarticulo(int id)
@@ -45,7 +45,7 @@ namespace Umg.Web.Controllers
         }
 
 
-        // put api/Categoria/2 
+        // put api/Articulo
         [HttpPut("idArticulo")]
         public async Task<IActionResult> putarticulo(int id, articulo articulo)
         {
@@ -54,7 +54,7 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
+           
             _context.Entry(articulo).State = EntityState.Modified;
 
             try
@@ -80,7 +80,7 @@ namespace Umg.Web.Controllers
 
         }
 
-        //POst api/Categorias
+        //POst api/Articulo
         [HttpPost]
         public async Task<ActionResult<articulo>> Postarticulo(articulo articulo)
         {
@@ -90,7 +90,7 @@ namespace Umg.Web.Controllers
             return CreatedAtAction("getarticulo", new { id = articulo.idArticulo }, articulo);
         }
 
-        //Delete Api/Categoria 2 
+        //Delete Api/Articulo 2
 
         [HttpDelete("idArticulo")]
         public async Task<ActionResult<articulo>> Deletearticulo(int id)

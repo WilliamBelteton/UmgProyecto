@@ -13,9 +13,15 @@ namespace Umg.Entidades.Usuarios
         public int idTelefono { get; set; }
 
 
+
+
+
         public String nombrePersona { get; set; }
         [required]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "el apartado persona no debe de tener mas de 50 caracteres, por favor validar")]
+
+
+
 
 
 

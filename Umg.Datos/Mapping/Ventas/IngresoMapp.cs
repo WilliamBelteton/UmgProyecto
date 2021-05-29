@@ -8,6 +8,11 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<ingreso> builder)
         {
+
+
+
+
+
             builder.ToTable("ingreso")
 
                   .HasKey(i => i.idIngreso);
@@ -26,6 +31,9 @@ namespace Umg.Datos
             builder.Property(i => i.fechaHoraIngreso);
 
             builder.Property(i => i.impuestoIngreso);
+
+
+
 
 
         }

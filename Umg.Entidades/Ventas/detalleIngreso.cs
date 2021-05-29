@@ -8,9 +8,9 @@ namespace Umg.Entidades.Ventas
     {
         public int idDetalleIngreso { get; set; }
 
-        public int idIngreso { get; set; } //f
+        public int idIngreso { get; set; }
 
-        public int idArticulo { get; set; } //f
+        public int idArticulo { get; set; }
 
         public int cantidadDetalleIngreso { get; set; }
         [required]

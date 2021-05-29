@@ -8,6 +8,15 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<ingreso_> builder)
         {
+
+
+
+
+
+
+
+
+
             builder.ToTable("ingreso_")
 
                   .HasKey(i => i.idIngreso_);

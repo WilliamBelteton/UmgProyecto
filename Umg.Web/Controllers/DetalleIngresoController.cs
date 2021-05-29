@@ -20,14 +20,14 @@ namespace Umg.Web.Controllers
             _context = context;
         }
 
-        //GET api/Categorias
+        //GET api/detalleIngreso
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<detalleIngreso>>> GetCategorias()
+        public async Task<ActionResult<IEnumerable<detalleIngreso>>> GetdetalleIngreso()
         {
             return await _context.DetallesIngresos.ToListAsync();
         }
 
-        // GET api/Categorias/2
+        // GET api/detalleIngreso
         [HttpGet("{idDetalleIngreso")]
 
         public async Task<ActionResult<detalleIngreso>> GetdetalleIngreso(int id)
@@ -43,7 +43,7 @@ namespace Umg.Web.Controllers
         }
 
 
-        // put api/Categoria/2 
+        // put api/detalleIngreso
         [HttpPut("idDetalleIngreso")]
         public async Task<IActionResult> putdetalleIngreso(int id, detalleIngreso detalleIngreso)
         {
@@ -52,7 +52,6 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
             _context.Entry(detalleIngreso).State = EntityState.Modified;
 
             try
@@ -77,7 +76,7 @@ namespace Umg.Web.Controllers
 
         }
 
-        //POst api/Categorias
+        //POst api/detalleIngreso
         [HttpPost]
         public async Task<ActionResult<detalleIngreso>> PostdetalleIngrso(detalleIngreso detalleIngreso)
         {
@@ -87,8 +86,7 @@ namespace Umg.Web.Controllers
             return CreatedAtAction("getdetalleIngreso", new { id = detalleIngreso }, detalleIngreso);
         }
 
-        //Delete Api/Categoria 2 
-
+        //Delete Api/detalleIngreso
         [HttpDelete("idDetalleIngreso")]
         public async Task<ActionResult<detalleIngreso>> DeletedetalleIngrso(int id)
         {

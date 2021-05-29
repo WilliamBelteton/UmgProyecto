@@ -54,7 +54,7 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
+            
             _context.Entry(categoria).State = EntityState.Modified;
 
             try

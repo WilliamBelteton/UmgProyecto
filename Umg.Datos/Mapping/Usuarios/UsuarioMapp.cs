@@ -8,6 +8,12 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<usuario> builder)
         {
+
+
+
+
+
+
             builder.ToTable("usuario")
                   .HasKey(u => u.idUsuario);
 
@@ -24,6 +30,16 @@ namespace Umg.Datos
             builder.Property(u => u.passwordHash);
 
             builder.Property(u => u.passwordSalt);
+
+
+
+
+
+
+
+
+
+
 
 
         }

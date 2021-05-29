@@ -20,14 +20,14 @@ namespace Umg.Web.Controllers
             _context = context;
         }
 
-        //GET api/Categorias
+        //GET api/telefono_
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<telefono_>>> GetTelefonos_()
+        public async Task<ActionResult<IEnumerable<telefono_>>> Gettelefono_()
         {
             return await _context.Telefonos_.ToListAsync();
         }
 
-        // GET api/Categorias/2
+        // GET api/telefono_
         [HttpGet("{idTelefono_")]
 
         public async Task<ActionResult<telefono_>> Gettelefono_(int id)
@@ -43,7 +43,7 @@ namespace Umg.Web.Controllers
         }
 
 
-        // put api/Categoria/2 
+        // put api/telefono_
         [HttpPut("idTelefono_")]
         public async Task<IActionResult> puttelefono_(int id, telefono_ telefono_)
 
@@ -53,7 +53,7 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
+            
             _context.Entry(telefono_).State = EntityState.Modified;
 
             try
@@ -78,9 +78,9 @@ namespace Umg.Web.Controllers
 
         }
 
-        //POst api/Categorias
+        //POst api/telefono_
         [HttpPost]
-        public async Task<ActionResult<telefono_>> PostCategoria(telefono_ telefono_)
+        public async Task<ActionResult<telefono_>> Posttelefono_(telefono_ telefono_)
         {
             _context.Telefonos_.Add(telefono_);
             await _context.SaveChangesAsync();
@@ -88,7 +88,7 @@ namespace Umg.Web.Controllers
             return CreatedAtAction("gettelefono_", new { id = telefono_.idTelefono }, telefono_);
         }
 
-        //Delete Api/Categoria 2 
+        //Delete Api/telefono_
 
         [HttpDelete("idTelefono_")]
         public async Task<ActionResult<telefono_>> Deletetelefono_(int id)

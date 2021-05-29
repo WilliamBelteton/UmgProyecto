@@ -20,14 +20,14 @@ namespace Umg.Web.Controllers
             _context = context;
         }
 
-        //GET api/Categorias
+        //GET api/usuario_
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<usuario_>>> GetUsuarios_()
+        public async Task<ActionResult<IEnumerable<usuario_>>> Getusuario_()
         {
             return await _context.Usuarios_.ToListAsync();
         }
 
-        // GET api/Categorias/2
+        // GET api/usuario_
         [HttpGet("{idUsuario_")]
 
         public async Task<ActionResult<usuario_>> Getusuario_(int id)
@@ -44,7 +44,7 @@ namespace Umg.Web.Controllers
         }
 
 
-        // put api/Categoria/2 
+        // put api/usuario_
         [HttpPut("idUsuario_")]
         public async Task<IActionResult> putusuario_(int id, usuario_ usuario_)
         {
@@ -53,7 +53,7 @@ namespace Umg.Web.Controllers
                 return BadRequest();
             }
 
-            //MI ENTIDAD YA TIENE LAS PROPIEDADES QUE VOY A AGUARDAR EN MI BD
+         
             _context.Entry(usuario_).State = EntityState.Modified;
 
             try
@@ -78,9 +78,9 @@ namespace Umg.Web.Controllers
 
         }
 
-        //POst api/Categorias
+        //POst api/usuario_
         [HttpPost]
-        public async Task<ActionResult<usuario_>> PostCategoria(usuario_ usuario_)
+        public async Task<ActionResult<usuario_>> Postusuario_(usuario_ usuario_)
 
         {
             _context.Usuarios_.Add(usuario_);
@@ -89,7 +89,7 @@ namespace Umg.Web.Controllers
             return CreatedAtAction("getusuario_", new { id = usuario_.idUsuario }, usuario_);
         }
 
-        //Delete Api/Categoria 2 
+        //Delete Api/usuario_
 
         [HttpDelete("idUsuario_")]
         public async Task<ActionResult<usuario_>> Deleteusuario_(int id)

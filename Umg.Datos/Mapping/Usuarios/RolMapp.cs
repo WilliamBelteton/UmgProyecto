@@ -8,6 +8,10 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<rol> builder)
         {
+
+
+
+
             builder.ToTable("rol")
                   .HasKey(r => r.idRol);
             builder.Property(r => r.nombreRol)
@@ -15,6 +19,10 @@ namespace Umg.Datos
             builder.Property(r => r.descripcionRol)
                 .HasMaxLength(100);
             builder.Property(r => r.condicion);
+
+
+
+
 
         }
     }

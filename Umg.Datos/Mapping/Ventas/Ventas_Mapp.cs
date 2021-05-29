@@ -8,6 +8,9 @@ namespace Umg.Datos
     {
         public void Configure(EntityTypeBuilder<ventas_> builder)
         {
+
+
+
             builder.ToTable("ventas_")
 
                   .HasKey(ve => ve.idVenta_);
@@ -23,6 +26,9 @@ namespace Umg.Datos
 
             builder.Property(ve => ve.total);
             builder.Property(ve => ve.condicionVenta);
+
+
+
 
 
         }

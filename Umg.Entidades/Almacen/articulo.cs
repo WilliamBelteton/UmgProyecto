@@ -10,19 +10,31 @@ namespace Umg.Entidades.Almacen
         public int idArticulo { get; set; }
 
 
-        public int idCodigoArticulo { get; set; } // llave foranea
+        public int idCodigoArticulo { get; set; }
 
 
-        public int idCategoria { get; set; } // llave foranea
+        public int idCategoria { get; set; } 
+
+
 
 
         public String nombreArticulo { get; set; }
+
+
         [required]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "el articulo no debe de tener mas de 50 caracteres, por favor validar")]
+
+
+
+
 
         public String descripcionArticulo { get; set; }
         [required]
         [StringLength(256, MinimumLength = 3, ErrorMessage = "la descripcion no debe de tener mas de 256 caracteres, por favor validar")]
+
+
+
+
 
         public bool condicionArticulo { get; set; }
 
